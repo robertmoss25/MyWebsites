@@ -1,0 +1,87 @@
+[
+    {
+        "url": "https://codesandbox.io/s/keeper-part-3-starting-s13gn?file=/public/styles.css:0-1629",
+        "Category": "React, Express, Javascript, NodeJs",
+        "Comment": "Website where you can develop nodejs applications"
+    },
+    { 
+        "url": "https://material-ui.com/getting-started/installation/",
+        "Category": "React",
+        "Comment": "Website to provide components to use for React"
+    },
+    { 
+        "url": "https://codepen.io/pen/?editors=1000",
+        "Category": "HTML",
+        "Comment": "Website to test out HTML code"
+    },
+    { 
+        "url": "https://unicode.org/emoji/charts/full-emoji-list.html#1f408",
+        "Category": "Emoji",
+        "Comment": "Website that provides emoji's to use"
+    },
+    { 
+        "url": "https://www.w3schools.com/howto/howto_js_sort_list.asp",
+        "Category": "W3Schools",
+        "Comment": "Shows how to sort a list"
+    },
+    { 
+        "url": "https://stackoverflow.com/questions/19869639/how-to-call-a-javascript-function-within-an-html-body/19869671",
+        "Category": "JavaScript, HTML",
+        "Comment": "How to call a JavaScript function within an HTML body"
+    },
+    { 
+        "url": "https://www.w3schools.com/js/js_function_parameters.asp",
+        "Category": "JavaScript",
+        "Comment": "JavaScript function parameters"
+    },
+    { 
+        "url": "https://www.w3schools.com/jsref/met_element_getelementsbytagname.asp",
+        "Category": "JavaScript, HTML, CSS",
+        "Comment": "HTML DOM getElementsByTagName() Method"
+    },
+    { 
+        "url": "https://bytes.com/topic/javascript/answers/712764-how-getelementbytype-check-validation-using-javascript",
+        "Category": "JavaScript, HTML",
+        "Comment": "How to getElementByType and check validation using javascript."
+    },
+    { 
+        "url": "https://www.favicon.cc/",
+        "Category": "Icons",
+        "Comment": "Create your own icons"
+    },
+    { 
+        "url": "https://www.w3schools.com/cssref/pr_dim_line-height.asp",
+        "Category": "CSS, HTML",
+        "Comment": "CSS line-height Property"
+    },
+    { 
+        "url": "https://github.com/williamfiset/Algorithms",
+        "Category": "Algorithms, Data Structures",
+        "Comment": "Algorithms & data structures project, sample code"
+    },
+    { 
+        "url": "https://www.youtube.com/watch?v=r1MXwyiGi_U",
+        "Category": "Algorithms, Data Structures",
+        "Comment": "Top 10 Algorithms for the Coding Interview (for software engineers)"
+    },
+    { 
+        "url": "https://www.onlineocr.net/",
+        "Category": "OCR",
+        "Comment": "Free Online OCR Service"
+    },
+    { 
+        "url": "https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm",
+        "Category": "Algorithms, Data Structures",
+        "Comment": "Data Structures - Asymptotic Analysis"
+    },
+    { 
+        "url": "https://medium.com/javarevisited/25-software-design-interview-questions-to-crack-any-programming-and-technical-interviews-4b8237942db0",
+        "Category": "Software Design",
+        "Comment": "25 Software Design Interview Questions to Crack Any Programming and Technical Interviews"
+    },
+    { 
+        "url": "https://www.educative.io/courses/grokking-the-system-design-interview/m2yDVZnQ8lG",
+        "Category": "Software Design",
+        "Comment": "Designing Instagram"
+    }  
+]

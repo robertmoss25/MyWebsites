@@ -41,109 +41,39 @@
             <th scope="col">Comment</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">https://codesandbox.io/s/keeper-part-3-starting-s13gn?file=/public/styles.css:0-1629</th>
-            <td>React, Express, Javascript, NodeJs</td>
-            <td>Website where you can develop nodejs applications</td>
-          </tr>
-          <tr>
-            <th scope="row">https://material-ui.com/getting-started/installation/</th>
-            <td>React</td>
-            <td>Website to provide components to use for React</td>
-          </tr>
-          <tr>
-            <th scope="row">https://codepen.io/pen/?editors=1000</th>
-            <td>HTML</td>
-            <td>Website to test out HTML code</td>
-          </tr>
-          <tr>
-            <th scope="row">https://unicode.org/emoji/charts/full-emoji-list.html#1f408</th>
-            <td>Emoji</td>
-            <td>Website that provides emoji's to use</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.w3schools.com/howto/howto_js_sort_list.asp</th>
-            <td>W3Schools</td>
-            <td>Shows how to sort a list</td>
-          </tr>
-          <tr>
-            <th scope="row">https://stackoverflow.com/questions/19869639/how-to-call-a-javascript-function-within-an-html-body/19869671</th>
-            <td>JavaScript, HTML</td>
-            <td>How to call a JavaScript function within an HTML body</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.w3schools.com/js/js_function_parameters.asp</th>
-            <td>JavaScript</td>
-            <td>JavaScript function parameters</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.w3schools.com/jsref/met_element_getelementsbytagname.asp</th>
-            <td>JavaScript, HTML, CSS</td>
-            <td>HTML DOM getElementsByTagName() Method</td>
-          </tr>
-          <tr>
-            <th scope="row">https://bytes.com/topic/javascript/answers/712764-how-getelementbytype-check-validation-using-javascript</th>
-            <td>JavaScript, HTML</td>
-            <td>How to getElementByType and check validation using javascript.</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.favicon.cc/</th>
-            <td>Icons</td>
-            <td>Create your own icons</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.w3schools.com/cssref/pr_dim_line-height.asp</th>
-            <td>CSS, HTML</td>
-            <td>CSS line-height Property</td>
-          </tr>
-          <tr>
-            <th scope="row">https://github.com/williamfiset/Algorithms</th>
-            <td>Algorithms, Data Structures</td>
-            <td>Algorithms & data structures project, sample code</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.youtube.com/watch?v=r1MXwyiGi_U</th>
-            <td>Algorithms, Data Structures</td>
-            <td>Top 10 Algorithms for the Coding Interview (for software engineers)</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.onlineocr.net/</th>
-            <td>OCR</td>
-            <td>Free Online OCR Service</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm</th>
-            <td>Algorithms, Data Structures</td>
-            <td>Data Structures - Asymptotic Analysis</td>
-          </tr>
-          <tr>
-            <th scope="row">https://medium.com/javarevisited/25-software-design-interview-questions-to-crack-any-programming-and-technical-interviews-4b8237942db0</th>
-            <td>Software Design</td>
-            <td>25 Software Design Interview Questions to Crack Any Programming and Technical Interviews</td>
-          </tr>
-          <tr>
-            <th scope="row">https://www.educative.io/courses/grokking-the-system-design-interview/m2yDVZnQ8lG</th>
-            <td>Software Design</td>
-            <td>Designing Instagram</td>
-          </tr>
+        <tbody id="header">
         </tbody>
       </table>
+      <div>
+        <table class="table">
+          <tr>
+            <th class="pageinfo" id="currentPageDetails">Page</th>
+            <th>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item"><a class="page-link" href="#" id = "previous" onclick="handleClickPage(event,-1)">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id = "link1" onclick="handleClickPage(event, 1)">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id = "link2" onclick="handleClickPage(event, 2)">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id = "link3" onclick="handleClickPage(event, 3)">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id = "next" onclick="handleClickPage(event,0)">Next</a></li>
+                </ul>
+              </nav>
+            </th>
+          </tr>
+        </table>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
 
   <footer id="footer">
-    <i class="social-icon fab fa-facebook-f"></i>
-    <i class="social-icon fab fa-tritter"></i>
-    <i class="social-icon fab fa-instagram"></i>
-    <i class="social-icon fab fa-envelope"></i>
     <p>© Copyright 2020 Robert Moss</p>
 
   </footer>
 
-
+<script src="index.js"></script>
 </body>
 
 </html>
+

@@ -3,6 +3,12 @@ body {
     font-size: 14px;
 }
 
+.pageinfo {
+    font-family: "Calibri";
+    font-size: 20px;
+    color: lightblue;
+}
+
 #title {
     background-color: white;
     color: white;
@@ -86,4 +92,11 @@ Third value is bottom
 
 .social-icon {
     margin: 20px 10px;
+}
+
+.disabledLink
+{
+color: #333;
+text-decoration : none;
+cursor: default;
 }
