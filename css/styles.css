@@ -1,9 +1,10 @@
 body {
-    font-family: "Monserrat";
+    font-family: "Calibri";
+    font-size: 14px;
 }
 
 #title {
-    background-color: #674cff;
+    background-color: white;
     color: white;
 }
 
@@ -32,9 +33,16 @@ p {
     color: #8f8f8f;
 }
 
-.container-fluid {
-    padding: 3% 15% 7%;
-}
+/* 
+First value is top
+Second value is 
+Third value is bottom
+
+*/
+
+/* .container-fluid {
+    padding: 5% 25% 5% 0%;
+} */
 
 .navbar {
     padding: 0 0 4.5rem;
@@ -70,99 +78,12 @@ p {
     right: 30%;
 }
 
-/* Features Section */
-
-#features {
-    padding: 7% 15%;
-    background-color: white;
-    position: relative;
-}
-
-.feature-box {
-    text-align: center;
-    padding: 5%;
-}
-
-.icon {
-    color: #ef8172;
-    margin-bottom: 1rem;
-}
-
-.icon:hover {
-    color: #ff4c68;
-}
-
-/* Testomonial Section */
-#testimonials {
-    text-align: center;
-    background-color: #ef8172;
-    color: white;
-}
-
-.testimonial-image {
-    width: 10%;
-    border-radius: 100%;
-    margin: 20px;
-}
-
-.carousel-item {
-    padding: 7% 15%;
-}
-
-#press {
-    background-color: #ef8172;
-    text-align: center;
-    padding-bottom: 3%;
-}
-
-.press-logo {
-    width: 15%;
-    margin: 20px 20px 50px;
-}
-
-/* Pricing Section */
-
-#pricing {
-    padding: 100px;
-}
-
-.pricing-column {
-    padding: 3% 2%;
-    text-align: center;
-}
-
-/* CTA Section */
-#cta {
-    background-color: #ff4c68;
-    color: white;
-    padding: 7% 15%;
-    text-align: center;
-}
-
-.cta-heading {
-    font-family: "Monserrat-thin, sans-serif";
-    font-size: 3.5rem;
-    font-weight: 900;
-    line-height: 1.5;
-}
-
 /* Footer */
 #footer {
-    padding: 7% 15%;
+    padding: 1% 1% 1% 1%;
     text-align: center;
 }
 
 .social-icon {
     margin: 20px 10px;
-}
-
-@media (max-width: 1028px) {
-
-    #title {
-        text-align: center;
-    }
-    .title-image {
-        position: static;
-        transform: rotate(0);
-    }
 }
