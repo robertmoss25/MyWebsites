@@ -1,6 +1,6 @@
 body {
     font-family: "Calibri";
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .pageinfo {
@@ -46,9 +46,9 @@ Third value is bottom
 
 */
 
-/* .container-fluid {
-    padding: 5% 25% 5% 0%;
-} */
+.container-fluid {
+    padding: 2% 2% 2% 2%;
+}
 
 .navbar {
     padding: 0 0 4.5rem;

@@ -29,7 +29,7 @@
 </head>
 
 <body>
-  <section id="title">
+  <section id="websites">
 
     <div class="container-fluid">
 
@@ -51,11 +51,13 @@
             <th>
               <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
+                  <li class="page-item"><a class="page-link" href="#" id = "begin" onclick="handleClickBegin(event)">&#8678;</a></li>
                   <li class="page-item"><a class="page-link" href="#" id = "previous" onclick="handleClickPage(event,-1)">Previous</a></li>
                   <li class="page-item"><a class="page-link" href="#" id = "link1" onclick="handleClickPage(event, 1)">1</a></li>
                   <li class="page-item"><a class="page-link" href="#" id = "link2" onclick="handleClickPage(event, 2)">2</a></li>
                   <li class="page-item"><a class="page-link" href="#" id = "link3" onclick="handleClickPage(event, 3)">3</a></li>
                   <li class="page-item"><a class="page-link" href="#" id = "next" onclick="handleClickPage(event,0)">Next</a></li>
+                  <li class="page-item"><a class="page-link" href="#" id = "end" onclick="handleClickEnd(event)">&#8680;</a></li>
                 </ul>
               </nav>
             </th>
@@ -64,6 +66,21 @@
       </div>
     </div>
   </section>
+
+  <section id="website-search">
+    <div class="container-fluid">
+      <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id=dropdown>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
 
   <!-- Footer -->
 
@@ -77,3 +94,8 @@
 
 </html>
 
+<!-- 
+<a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+-->
