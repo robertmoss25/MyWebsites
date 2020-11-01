@@ -108,7 +108,7 @@ function loadCategoryQuestions(value) {
     fetch("websites.json")
     .then(response => response.json())
     .then(json => {
-        for (let i = currentPos; i < json.length; i++) {
+        for (let i = 0; i < json.length; i++) {
             let bFound = false;
             let splitStrings = json[i].Category.split(',');
             splitStrings.forEach(element => {

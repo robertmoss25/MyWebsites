@@ -171,7 +171,7 @@
     },
     { 
         "url": "https://www.youtube.com/watch?v=AqanhZQJfrw&feature=youtu.be",
-        "Category": "RESTAPI, NodeJs, TypeScript",
+        "Category": "REST API, NodeJs, TypeScript",
         "Comment": "Creating REST APIs with Node.js & TypeScript - part 1"
     },
     { 
@@ -251,7 +251,77 @@
     },
     { 
         "url": "https://machinelearningmastery.com/use-keras-deep-learning-models-scikit-learn-python/",
-        "Category": "Python, Keras, DeepLearning, Scikit-Learn",
+        "Category": "Python, Keras, Deep Learning, Scikit-Learn",
         "Comment": "Use Keras Deep Learning Models with Scikit-Learn in Python"
-    }  
+    },
+    { 
+        "url": "https://console.firebase.google.com/u/0/project/ng-course-recipe-book-83263/overview",
+        "Category": "Firebase, Udemy, Angular",
+        "Comment": "Cloud Deployment tool that allows you to upload your website that is using NodeJS"
+    },
+    { 
+        "url": "https://ng-course-recipe-book-83263.firebaseapp.com/shopping-list",
+        "Category": "Firebase, Udemy, Angular",
+        "Comment": "Recipe Book app depoyed onto cloud from Angular course"
+    },
+    { 
+        "url": "https://www.youtube.com/watch?v=W95p0E-CB_s",
+        "Category": "Linear Algebra, Row Echelon Form",
+        "Comment": "Reduced Row Echelon Form - #1 Skill in Linear Algebra"
+    },
+    { 
+        "url": "https://medium.com/@raza.shahzad/setting-up-tensorflow-gpu-keras-in-conda-on-windows-10-75d4fd498198",
+        "Category": "Anaconda, Tensorflow, GPU, Keras, Windows 10",
+        "Comment": "Setting up Tensorflow-GPU/Keras in Conda on Windows 10"
+    },
+    { 
+        "url": "https://developer.nvidia.com/deep-learning-software",
+        "Category": "NVIDIA, Deep Learning, CUDA",
+        "Comment": "DEEP LEARNING SOFTWARE"
+    },
+    { 
+        "url": "https://medium.com/@ab9.bhatia/set-up-gpu-accelerated-tensorflow-keras-on-windows-10-with-anaconda-e71bfa9506d1",
+        "Category": "Anaconda, Tensorflow, GPU, Keras, Windows 10",
+        "Comment": "Set up GPU Accelerated Tensorflow & Keras on Windows 10 with Anaconda"
+    },
+    { 
+        "url": "https://stackoverflow.com/questions/49127834/removing-conda-environment",
+        "Category": "Anaconda",
+        "Comment": "Removing Conda environment"
+    },
+    { 
+        "url": "https://www.superdatascience.com/pages/deep-learning",
+        "Category": "Deep Learning, Udemy",
+        "Comment": "Deep Learning A-Z™: Download Practice Datasets"
+    },
+    { 
+        "url": "https://stackabuse.com/time-series-analysis-with-lstm-using-pythons-keras-library/",
+        "Category": "LSTM, Python, Keras",
+        "Comment": "Time Series Analysis with LSTM using Python's Keras Library"
+    },
+    { 
+        "url": "https://fontawesome.com/icons/check-circle?style=regular",
+        "Category": "Font, Udemy",
+        "Comment": "Download icons for use in your own website"
+    },
+    { 
+        "url": "https://zellwk.com/blog/local-mongodb/#:~:text=You%20can%20download%20and%20install%20MongoDB%20Compass%20from%20the%20this%20page.&text=To%20connect%20to%20your%20local,databases%20in%20your%20local%20MongoDB.",
+        "Category": "MongoDB, Udemy",
+        "Comment": "How to setup a local MongoDB Connection"
+    },
+    { 
+        "url": "http://www.miraclesalad.com/webtools/md5.php",
+        "Category": "MD5, Hash Generator",
+        "Comment": "md5 Hash Generator"
+    },
+    { 
+        "url": "http://www.miraclesalad.com/webtools/md5.php",
+        "Category": "Data Structures",
+        "Comment": "Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer"
+    },
+    { 
+        "url": "https://dev.to/miku86/javascript-data-structures-singly-linked-list-shift-4gl0",
+        "Category": "Data Structures, JavaScript, Linked List",
+        "Comment": "JavaScript Data Structures: Singly Linked List: Shift"
+    } 
 ]
