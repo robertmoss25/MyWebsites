@@ -2,101 +2,142 @@ const itemsPerPage = 6;
 var currentPos = 0;
 var totalSize = 0;
 const header = document.getElementById('header');
+const header2 = document.getElementById('header2');
 const previous = document.getElementById('previous');
 const next = document.getElementById('next');
 const link2 = document.getElementById('link2');
 const link3 = document.getElementById('link3');
 const currentPageDetails = document.getElementById('currentPageDetails');
+const dropdown = document.getElementById('dropdown');
+const dropdownMenuLink = document.getElementById('dropdownMenuLink');
+const categoryArray = {};
+let totalCategories = 0;
 
 let innerHTML = '';
 
+getCategories();
 loadQuestions();
 
-// fetch("websites.json")
-//   .then(response => response.json())
-//   .then(json => {
-    
-//     totalSize = json.length;
-//     currentPos = localStorage.getItem('currentPos');
+function getCategories() {
+    let innerHTML = '';
 
-//     previous.hidden = currentPos <= 0;
-//     next.hidden = currentPos+itemsPerPage >= totalSize;
-//     let range = (totalSize / itemsPerPage);
-//     console.log(range);
-//     link2.hidden = totalSize < itemsPerPage+1;
-//     link3.hidden = totalSize < (itemsPerPage*2)+1;
-//     console.log("next.hidden " + next.hidden);
-//     let endPos = Math.min(json.length, currentPos + itemsPerPage);
-//     for (let i = currentPos; i < endPos; i++) {
-//         innerHTML += ' <tr>';
-//         innerHTML += '<th scope="row">';
-//         innerHTML += json[i].url;
-//         innerHTML += '</th>';
-//         innerHTML += '<td>';
-//         innerHTML += json[i].Category;
-//         innerHTML += '</td>';
-//         innerHTML += '<td>';
-//         innerHTML += json[i].Comment;
-//         innerHTML += '</td>';
-//         innerHTML += '</tr>';
-//         header.innerHTML = innerHTML;
-//     }
-//     localStorage.setItem('currentPos', currentPos);
-//     let value = (currentPos / itemsPerPage)+1;
-//     let totalPages = Math.ceil((totalSize / itemsPerPage));
-//     console.log(value);
-//     currentPageDetails.innerHTML = "Page " + Math.floor(value) + " of " + totalPages;
+    fetch("websites.json")
+    .then(response => response.json())
+    .then(json => {
+        let localCategoryArray = {}
+        for (let i = currentPos; i < json.length; i++) {
+            let splitStrings = json[i].Category.split(',');
+            splitStrings.forEach(element => {
+                localCategoryArray[element.trim().toUpperCase()] = true;
+            });
+        }
+        // Create items array
+        var items = Object.keys(localCategoryArray).map(function(key) {
+            return [key];
+        });
+  
+        // Sort the array based on the second element
+        items.sort();
+        for (let index = 0; index < items.length; index++) {
+            categoryArray[index] = items[index];
+        } 
 
-//   }).catch(err => {
-//     console.error(err);
-// });
+        for(var key in categoryArray) {
+            innerHTML += '<a class="dropdown-item" href="#" onclick="handleDropDownClick(event,';
+            innerHTML += key;
+            innerHTML += ')"';
+            innerHTML += ' id=';
+            innerHTML += key;
+            innerHTML += '>';
+            innerHTML += categoryArray[key];
+            innerHTML += '</a>';
+        }
+        dropdown.innerHTML = innerHTML;
+            
+    }).catch(err => {
+        console.error(err);
+    });
+}
 
 function loadQuestions() {
     innerHTML = '';
 
     fetch("websites.json")
-  .then(response => response.json())
-  .then(json => {
-    
-    totalSize = json.length;
-    currentPos = localStorage.getItem('currentPos');
+    .then(response => response.json())
+    .then(json => {
+        totalSize = json.length;
+        currentPos = localStorage.getItem('currentPos');
+        previous.hidden = currentPos <= 0;
+        next.hidden = Number(currentPos)+Number(itemsPerPage) >= totalSize;
+        let range = (totalSize / itemsPerPage);
+        link2.hidden = totalSize < itemsPerPage+1;
+        link3.hidden = totalSize < (itemsPerPage*2)+1;
+        var calcValue = Number(currentPos) + Number(itemsPerPage);
+        let endPos = Math.min(totalSize, calcValue);
+        for (let i = currentPos; i < endPos; i++) {
+            innerHTML += ' <tr>';
+            innerHTML += '<th scope="row">';
+            innerHTML += '<a href="'
+            innerHTML += json[i].url;
+            innerHTML += '" target="_blank">';
+            innerHTML += json[i].url;
+            innerHTML += "</a> ";
+            innerHTML += '</th>';
+            innerHTML += '<td>';
+            innerHTML += json[i].Category;
+            innerHTML += '</td>';
+            innerHTML += '<td>';
+            innerHTML += json[i].Comment;
+            innerHTML += '</td>';
+            innerHTML += '</tr>';
+        }
 
-    previous.hidden = currentPos <= 0;
-    next.hidden = Number(currentPos)+Number(itemsPerPage) >= totalSize;
-    let range = (totalSize / itemsPerPage);
-    console.log("totalSize = " + totalSize);
-    console.log("itemsPerPage " + itemsPerPage);
-    console.log("range " + range);
-    console.log("currentPos " + currentPos);
-    link2.hidden = totalSize < itemsPerPage+1;
-    link3.hidden = totalSize < (itemsPerPage*2)+1;
-    console.log("next.hidden " + next.hidden);
-    var calcValue = Number(currentPos) + Number(itemsPerPage);
-    let endPos = Math.min(totalSize, calcValue);
-    console.log("endPos " + endPos + " calcValue " + calcValue);
-    for (let i = currentPos; i < endPos; i++) {
-        innerHTML += ' <tr>';
-        innerHTML += '<th scope="row">';
-        innerHTML += json[i].url;
-        innerHTML += '</th>';
-        innerHTML += '<td>';
-        innerHTML += json[i].Category;
-        innerHTML += '</td>';
-        innerHTML += '<td>';
-        innerHTML += json[i].Comment;
-        innerHTML += '</td>';
-        innerHTML += '</tr>';
         header.innerHTML = innerHTML;
-    }
-    ////localStorage.setItem('currentPos', currentPos);
-    let value = (currentPos / itemsPerPage)+1;
-    let totalPages = Math.ceil((totalSize / itemsPerPage));
-    console.log(value);
-    currentPageDetails.innerHTML = "Page " + Math.floor(value) + " of " + totalPages;
+        let value = (currentPos / itemsPerPage)+1;
+        let totalPages = Math.ceil((totalSize / itemsPerPage));
+        console.log(value);
+        currentPageDetails.innerHTML = "Page " + Math.floor(value) + " of " + totalPages;
+    }).catch(err => {
+        console.error(err);
+    });
+}
 
-  }).catch(err => {
-    console.error(err);
-});
+function loadCategoryQuestions(value) {
+    innerHTML = '';
+
+    fetch("websites.json")
+    .then(response => response.json())
+    .then(json => {
+        for (let i = currentPos; i < json.length; i++) {
+            let bFound = false;
+            let splitStrings = json[i].Category.split(',');
+            splitStrings.forEach(element => {
+                console.log(element.trim().toUpperCase() + " " + value);
+                if (element.trim().toUpperCase() == value) 
+                    bFound = true;
+            });
+            if (bFound) {
+                innerHTML += ' <tr>';
+                innerHTML += '<th scope="row">';
+                innerHTML += '<a href="'
+                innerHTML += json[i].url;
+                innerHTML += '" target="_blank">';
+                innerHTML += json[i].url;
+                innerHTML += "</a> ";
+                innerHTML += '</th>';
+                innerHTML += '<td>';
+                innerHTML += json[i].Category;
+                innerHTML += '</td>';
+                innerHTML += '<td>';
+                innerHTML += json[i].Comment;
+                innerHTML += '</td>';
+                innerHTML += '</tr>';
+            }
+        }
+        header2.innerHTML = innerHTML;
+    }).catch(err => {
+        console.error(err);
+    });
 }
 
 function handleClickPage(event, item) {
@@ -129,3 +170,10 @@ function handleClickEnd(event) {
     localStorage.setItem('currentPos', currentPos);
     loadQuestions();
 }
+
+function handleDropDownClick(event, value) {
+    console.log(categoryArray[value]);
+    dropdownMenuLink.innerHTML = categoryArray[value];
+    loadCategoryQuestions(categoryArray[value]);
+} 
+
